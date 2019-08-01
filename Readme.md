@@ -1,7 +1,7 @@
-##PROYECTO GCBA
-###Autor: Yamil Lopez
-###Fecha de creación: 27.07.2019
-###Fecha de última modificación
+## PROYECTO GCBA
+### Autor: Yamil Lopez
+### Fecha de creación: 27.07.2019
+### Fecha de última modificación
 
 
 ###***Descripción de la entrega***
