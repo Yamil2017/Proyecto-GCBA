@@ -16,4 +16,4 @@
 
 > - *Load.php*: Lista los *Datos personales* de todos los perfiles residentes en la base de datos.
 
-> *Delete*: Elimina perfiles completos a partir del *dni*.
+> - *Delete*: Elimina perfiles completos a partir del *dni*.
