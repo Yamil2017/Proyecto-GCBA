@@ -12,7 +12,7 @@
 #### - Formulario html: formulario-v1.html
 > - Formulario para interacción con la base de datos a través de los requerimientos solicitados
 #### - Métodos php: Save.php, Load.php, Delete.php
-> - *Save.php*: guarda la información volcada en el formulario. El teléfono móvil, y los campos de *Datos personales* y *Dirección* son requeridos para el submit.
+> - *Save.php*: guarda la información volcada en el formulario. El *teléfono móvil*, los campos de *Datos personales* y *Dirección* son requeridos para el submit.
 
 > - *Load.php*: Lista los *Datos personales* de todos los perfiles residentes en la base de datos.
 
