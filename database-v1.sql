@@ -1,4 +1,10 @@
+/*******************************
 
+Autor: Yamil Lopez
+Creación: 27.7.2019
+Última modificación: 01.08.2019
+
+*******************************/
 CREATE TABLE Datos_Personales(
 	datos_personales_id INTEGER NOT NULL AUTO_INCREMENT,
 	nombres VARCHAR(100),
@@ -49,8 +55,8 @@ CREATE TABLE Experiencia_laboral(
 	pais VARCHAR(50),
 	puesto VARCHAR(100),
 	nivel VARCHAR(50),
-	desde VARCHAR(100),
-	hasta VARCHAR(100),
+	desde VARCHAR(100)
+,	hasta VARCHAR(100),
 	area_puesto VARCHAR(150),
 	descripcion VARCHAR(255),
 	personas_cargo INTEGER,

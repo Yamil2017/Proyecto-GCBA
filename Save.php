@@ -1,3 +1,10 @@
+
+<!--
+Autor: Yamil Lopez
+Creación: 29.7.2019
+Última modificación: 01.08.2019
+-->
+
 <pre>
 $_POST:
 <?php
@@ -46,14 +53,13 @@ $username = "root";
 try {
 	
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
+ 
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     $sql = "INSERT INTO Datos_personales (nombres,apellido,sexo,estado_civil,dni) 
     VALUES ('$nombres','$apellido','$sexo','$estado_civil','$dni')";
     $conn->exec($sql);
 	$lastId=$conn->lastInsertId();
-    echo $lastId;
 
     $sql = "INSERT INTO Telefono (fijo,movil,datos_personales_id) VALUES ('$fijo','$movil','$lastId')";
     $conn->exec($sql);
@@ -66,9 +72,23 @@ try {
     desde,hasta,persona_referencia,datos_personales_id) VALUES ('$empresa','$actividad','$paisEmpresa','$puesto','$nivelPuesto',
     '$areaPuesto','$personal','$descripcionPuesto','$experienciaDesde','$experienciaHasta','$referencia','$lastId')";
     $conn->exec($sql);
-       
+
+	if ($idioma<>''){//Considero que si no indica el idioma el resto no importa
+		$sql = "INSERT INTO Idiomas (idioma,oral,escrito, datos_personales_id) 
+	    VALUES ('$idioma','$nivelOral','$nivelEscrito','$lastId')";
+	    $conn->exec($sql);		
+	}
+
+	$sql="INSERT INTO Estudios (casa_estudios,nivel,especialidad,desde,hasta,datos_personales_id) VALUES ('$casaEstudio','$nivelEstudio','$especialidad','$estudioDesde','$estudioHasta','$lastId')";	    
+    $conn->exec($sql);
+
+    if($objetivo<>NULL){
+	    $sql="INSERT INTO Objetivo (objetivo,datos_personales_id) VALUES ('$objetivo','$lastId')";	    
+	    $conn->exec($sql);}
+
+
     echo "New record created successfully\n\n";
-    echo $conn->lastInsertId();
+    
     }
 catch(PDOException $e)
     {
@@ -76,6 +96,7 @@ catch(PDOException $e)
     }
 
 $conn = null;
+header('location:formulario-v1.html');
 
 ?>
 </pre>

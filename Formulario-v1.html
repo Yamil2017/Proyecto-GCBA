@@ -1,0 +1,206 @@
+
+<!--
+Autor: Yamil Lopez
+Creación: 27.7.2019
+Última modificación: 01.08.2019
+-->
+
+<!DOCTYPE hmtl>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		
+	<title>
+		Ingreso de datos	
+	</title>
+	<style type="text/css">
+		.jumbotron {
+			margin-top: 20px;
+			background-image: url("buenosaires.jpg");
+			background-size: contain;		
+		}
+		body{
+			background-color: #ffaa00; 
+		}
+		#margen {
+			background-color: coral;
+		}
+		#fixed{
+			 position:fixed;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="row" align="center">
+		<div class="col-md-2" id="margen"></div>	
+		<div class="col-md-8">
+			<div class="jumbotron"></div>
+		
+			<form action="Save.php" method="post">
+				<fieldset>
+					<h1><legend>Datos Personales</legend></h1><br>
+					<label>Nombres:<br><input type="text" name="nombres" required="true" size="50" class="form-control"></label><br>
+					<label>Apellido:<br><input type="text" name="apellido" required="true" size="50" class="form-control"></label><br>
+					<label>Sexo:<br><input type="radio" name="sexo" value="m" required="true" class="form-check-input"> Masculino<br>
+						<input type="radio" name="sexo" value="f" class="form-check-input"> Femenino</label><br>
+					<label>Estado civil:<br><input type="radio" name="estado_civil" value="s" required="true" class="form-check-input">Soltero<br>
+						<input type="radio" name="estado_civil" value="c" class="form-check-input">Casado<br></label><br>
+					<label>DNI:<br><input type="text" name="dni" required="true" size="50" class="form-control"></label><br><br>
+					<fieldset>
+						<h1><legend>Teléfono</legend></h1><br>
+						<table class="table table-hover">
+							<tr>
+								<td width="100">Fijo: </td>
+								<td><input type="text" name="fijo" size="35" class="form-control"></td>
+							</tr>
+							<tr>
+								<td>Móvil: </td>
+								<td><input type="text" name="movil" size="35" class="form-control" required="true"></td>
+							</tr>
+						</table>	
+					</fieldset><br><br>
+					<fieldset>
+						<h1><legend>Dirección</legend></h1><br>
+						<table class="table table-hover">
+							<tr>
+								<td width="100">País: </td>
+								<td><input type="text" name="pais" required="true" size="35" class="form-control"></td>
+							</tr>
+							<tr>
+								<td>Provincia: </td>
+								<td><input type="text" name="provincia" required="true" size="35" class="form-control"></td>
+							</tr>
+							<tr>
+								<td>Ciudad: </td>
+								<td><input type="text" name="ciudad" required="true" size="35" class="form-control"></td>
+							</tr>
+							<tr>
+								<td>Calle: </td>
+								<td><input type="text" name="calle" required="true" size="35" class="form-control"></td>
+							</tr>
+						</table>
+					</fieldset><br><br>
+				</fieldset>
+				<fieldset>
+					<h1><legend>Objetivo laboral</legend></h1>
+					<label>Descripción: </p><textarea name="objetivo" class="form-control" cols="80" rows="8" placeholder="Comente brevemente sus proyecciones"></textarea></label><br><br>
+				</fieldset><br>
+				<fieldset>
+					<h1><legend>Experiencia Laboral </legend></h1><br>
+					<table class="table table-hover">
+						<tr>
+							<td width="200" >Empresa: </td>
+							<td><input type="text" name="empresa" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Actividad de la Empresa: </td>
+							<td><input type="text" name="actividad" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Puesto: </td>
+							<td><input type="text" name="puesto" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Nivel: </td>
+							<td><input type="text" name="nivelPuesto" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>País: </td>
+							<td><input type="text" name="paisEmpresa" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Desde: </td>
+							<td><input type="date" name="experienciaDesde" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Hasta: </td>
+							<td><input type="date" name="experienciaHasta" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Área del Puesto: </td>
+							<td><input type="text" name="areaPuesto" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Descripción: </td>
+							<td><textarea name="descripcionPuesto" cols="37" rows="8" size="35" placeholder="comente sus responsabilidades en el puesto" class="form-control"></textarea></td>
+						</tr>
+						<tr>
+							<td>Personas a Cargo: </td>
+							<td><input type="text" name="personal" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Persona de Referencia: </td>
+							<td><input type="text" name="referencia" size="35" class="form-control"></td>
+						</tr>
+					</table>
+				</fieldset><br><br>
+				<fieldset>
+					<h1><legend>Estudios</legend></h1><br>
+					<table class="table table-hover">
+						<tr>
+							<td width="150">Casa de Estudios: </td>
+							<td><input type="text" name="casaEstudios" placeholder="Institución" size="42" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Nivel: </td>
+							<td><input type="radio" name="nivelEstudio" value="inicial">Inicial  <input type="radio" name="nivelEstudio" value="intermedio">Intermedio  <input type="radio" name="nivelEstudio" value="avanzado">Avanzado  <input type="radio" name="nivelEstudio" value="finalizado">Finalizado</td>
+						</tr>
+						<tr>
+							<td>Especialidad </td>
+							<td><input type="text" name="especialidad" placeholder="área de estudio" size="42" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Desde: </td>
+							<td><input type="date" name="estudioDesde" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Hasta: </td>
+							<td><input type="date" name="estudioHasta" class="form-control"></td>
+						</tr>
+					</table>
+				</fieldset><br><br>
+				
+				<fieldset name="idiomas">
+					<h1><legend>Idiomas </legend></h1>
+					<table class="table table-hover">
+						<tr>
+							<td width="120">Idioma: </td>
+							<td><input type="text" name="idioma" id="idioma" size="35" class="form-control"></td>
+						</tr>
+						<tr>
+							<td>Oral: </td>
+							<td><input type="radio" name="nivelOral" value="inicial">Inicial   <input type="radio" name="nivelOral" value="intermedio">Intermedio   <input type="radio" name="nivelOral" value="avanzado">Avanzado   <input type="radio" name="nivelOral" value="bilingue">Bilingüe  </td>
+						</tr><br>
+							<tr>
+							<td>Escrito: </td>
+							<td><input type="radio" name="nivelEscrito" value="inicial">Inicial<input type="radio" name="nivelEscrito" value="intermedio">Intermedio   <input type="radio" name="nivelEscrito" value="avanzado">Avanzado   <input type="radio" name="nivelEscrito" value="bilingue">Bilingüe</td>
+						</tr>
+					</table>
+				</fieldset><br>
+
+				<input type="submit" name="save" value="Save" class="btn btn-primary btn-lg"><br>
+				<small>Se cargarán los datos en el sistema</small> 
+			</form>	
+		</div>
+		<div class="col-md-2" id="margen">
+			<form action="Delete.php" method="post"><br><br>
+				<label><b>Borrar perfil </b> <br><br><input type="text" name="delete" placeholder="Ingrese dni a eliminar"><br><br>
+					<input type="submit" name="deleteButton" value="Delete" class="btn btn-warning"><br>
+					<small>Se eliminarán todos los datos del perfil</small>
+				</label><br>
+			</form><br><br>
+			<form action="Load.php" method="post">
+				<input type="submit" name="loadButton" value="Load" class="btn btn-info" ><br>	 
+				<small>	Mostrar perfiles cargados </small>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+
